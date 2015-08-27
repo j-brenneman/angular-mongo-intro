@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="posts-workshop">
   <head>
     <meta charset="utf-8">
     <title>Angular Mid-Level</title>
@@ -8,9 +8,10 @@
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.js"></script>
+    <script src="app.js"></script>
   </head>
-  <body>
-
+  <body ng-controller="App-Controller">
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -47,7 +48,8 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
-    <h2 class="text-center"> {{1 + 2}} </h2>
-    
+    <h2 class="text-center"> {{ greeting }} </h2>
+    <div ng-view></div>
+
   </body>
 </html>
